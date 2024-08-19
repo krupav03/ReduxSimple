@@ -2,6 +2,7 @@
 export const INCREMENT  = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const RESET = 'RESET';
+export const MULTIPLYTWO = 'MULTIPLY'
 
 
 export const increment = () => ({
@@ -14,4 +15,7 @@ export const decrement = () => ({
 
 export const reset = () => ({
     type: 'RESET'
+});
+export const multiply = () => ({
+    type: 'MULTIPLY'
 })
