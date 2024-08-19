@@ -1,6 +1,7 @@
 // Actions are plain JavaScript objects that describe what happened.
 export const INCREMENT  = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const RESET = 'RESET';
 
 
 export const increment = () => ({
@@ -11,3 +12,6 @@ export const decrement = () => ({
     type : 'DECREMENT'
 });
 
+export const reset = () => ({
+    type: 'RESET'
+})

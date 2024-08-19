@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { increment, decrement } from "../Redux/Actions";
+import { increment, decrement, reset } from "../Redux/Actions";
 import { connect } from "react-redux";
 
-function CounterView({ count, increment, decrement }) {
+function CounterView({ count, increment, decrement, reset }) {
     return (
         <View style={styles.container}>
             <Text style={styles.countText}>{count}</Text>
@@ -12,6 +12,9 @@ function CounterView({ count, increment, decrement }) {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={decrement}>
                 <Text style={styles.buttonText}>Decrease</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={reset}>
+                <Text style={styles.buttonText}>Reset</Text>
             </TouchableOpacity>
         </View>
     );
@@ -26,7 +29,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
     increment,
-    decrement
+    decrement,
+    reset
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CounterView);

@@ -1,5 +1,5 @@
 // Reducers specify how the app's state changes in response to actions. 
-import { INCREMENT,DECREMENT } from "./Actions";
+import { INCREMENT,DECREMENT,RESET } from "./Actions";
 
 const initialState = {
     count : 0 
@@ -19,7 +19,12 @@ const counterReducer = (state = initialState, action) => {
                 ...state,
                 count : state.count - 1
             };
-        
+        case RESET :
+            return {
+                ...state,
+                count : 0
+            } 
+            
         default:
         return state;
     }
