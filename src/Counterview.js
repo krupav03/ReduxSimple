@@ -37,6 +37,17 @@ const mapDispatchToProps = {
     multiply
 };
 
+// const mapDispatchToProps = (dispatch) => ({
+//     increment: () => dispatch(increment()),
+//     decrement: () => dispatch(decrement())
+// });
+
+// useDispatch wasn't used. This is because useDispatch is a hook from React-Redux that is specifically designed for use with functional components and is part of the modern Redux approach, especially in projects using Redux Toolkit.
+
+// Using useDispatch in React-Redux
+// If you're using functional components and prefer using hooks, useDispatch and useSelector are commonly used in modern Redux setups. Here’s how you can use useDispatch to handle actions in a functional component:
+// Avoiding Direct dispatch Usage
+// Instead of calling dispatch directly, you can bind action creators to props using mapDispatchToProps. This approach makes your component code cleaner and easier to understand.
 export default connect(mapStateToProps, mapDispatchToProps)(CounterView);
 
 // Styles
