@@ -76,3 +76,20 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
 });
+
+
+
+
+// Traditional Redux: Uses mapDispatchToProps and connect to bind action creators to props.
+// Modern Redux with Hooks: Uses useDispatch and useSelector for dispatching actions and selecting state in functional components.
+
+
+// If you're working with functional components and modern React practices, using useDispatch and useSelector is a more straightforward approach. However, if you’re working with class components or prefer the traditional approach, using connect and mapDispatchToProps is still valid and widely used.
+
+// Class components cannot use hooks like useDispatch and useSelector. Instead, they use connect to connect to the Redux store. For new projects or functional components, hooks are recommended for their simplicity and readability. For existing class components or projects where class components are used, connect remains a valid and widely used approach.
+
+
+
+
+
+
